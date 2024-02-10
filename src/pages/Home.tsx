@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const logo = '../assets/Screenshot_2.png';
+import logo from "../assets/Screenshot_2.png"; // Importing the image directly
 
 const Home = () => {
     return (

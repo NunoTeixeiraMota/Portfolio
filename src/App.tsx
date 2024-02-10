@@ -6,6 +6,7 @@ import About from './pages/About'; // Import your About component
 import Projects from './pages/Projects'; // Import your Services component
 import Contact from './pages/Contact'; // Import your Contact component
 import Home from './pages/Home'; // Import your Home component
+import logo from './assets/logo.png'; // Import your logo directly
 
 function App() {
     // Define your menu links, logo
@@ -15,7 +16,6 @@ function App() {
         { label: 'Projects', to: '/projects' },
         { label: 'Contact', to: '/contact' }
     ];
-    const logo = './assets/logo.png'
     
     // Get the current location using useLocation hook
     const location = useLocation();
