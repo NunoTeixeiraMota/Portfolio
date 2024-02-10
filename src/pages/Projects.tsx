@@ -1,14 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Projects.css'; // Import the CSS file
+import './Projects.css';
+
+interface Project {
+    id: number;
+    name: string;
+    html_url: string;
+    languages_url: string;
+    // Add more properties as needed
+}
 
 const Projects = () => {
-    const [projects, setProjects] = useState([]);
+    const [projects, setProjects] = useState<Project[]>([]);
 
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('https://api.github.com/users/JoseTeixeira1200941/repos');
+                const response = await axios.get<Project[]>('https://api.github.com/users/JoseTeixeira1200941/repos');
                 setProjects(response.data);
             } catch (error) {
                 console.error('Error fetching GitHub projects:', error);
@@ -44,7 +52,6 @@ const Projects = () => {
     );
 };
 
-// Component to fetch and display top three languages used in a project
 const Languages = ({ projectUrl }: { projectUrl: string }) => {
     const [languages, setLanguages] = useState<string[]>([]);
 
