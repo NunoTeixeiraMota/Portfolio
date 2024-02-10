@@ -15,7 +15,7 @@ function App() {
         { label: 'Projects', to: '/projects' },
         { label: 'Contact', to: '/contact' }
     ];
-    const logo = '/vite-project/src/assets/logo.png';
+    const logo = './assets/logo.png'
     
     // Get the current location using useLocation hook
     const location = useLocation();

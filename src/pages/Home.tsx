@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const logo = '/vite-project/src/assets/Screenshot_2.png';
+const logo = '../assets/Screenshot_2.png';
 
 const Home = () => {
     return (
