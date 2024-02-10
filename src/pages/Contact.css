@@ -1,0 +1,55 @@
+/* Contact.css */
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Center the content */
+    
+}
+
+.contact-header h1 {
+    margin-bottom: 20px; /* Add space below the header */
+    color: #444444;
+}
+
+.contact-content {
+    text-align: left; /* Align content to the left within the centered container */
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none; /* Remove the bullet points */
+    padding: 0;
+    display: flex; /* Use flexbox to make the items horizontal */
+    flex-direction: row; /* Stack items horizontally */
+}
+
+.contact-info li {
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+.contact-info span {
+    font-weight: bold; /* Make the labels bold */
+    margin-right: 10px; /* Add space between label and link */
+}
+
+.contact-info a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+
+.contact-info a:hover {
+    color: #0056b3;
+}
