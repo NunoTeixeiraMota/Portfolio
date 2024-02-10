@@ -16,7 +16,7 @@ const Projects = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get<Project[]>('https://api.github.com/users/JoseTeixeira1200941/repos');
+                const response = await axios.get<Project[]>('https://api.github.com/users/NunoTeixeiraMota/repos');
                 setProjects(response.data);
             } catch (error) {
                 console.error('Error fetching GitHub projects:', error);

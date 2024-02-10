@@ -11,7 +11,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ links, logo, activeLink }) => {
     return (
         <NavContainer>
-            <Logo src={logo} alt="Logo" className='logo' /> {/* Updated to use src */}
+            <Logo src={logo} alt="Logo" className='logo' />
             {/* Render menu items using Menu component */}
             <MenuContainer>
                 <Menu links={links} activeLink={activeLink} />
@@ -21,20 +21,21 @@ const Navbar: React.FC<NavbarProps> = ({ links, logo, activeLink }) => {
 };
 
 const NavContainer = styled.nav`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it appears above other content */
-  display: flex;
-  justify-content: space-between; /* Distribute items evenly */
-  align-items: center; /* Center vertically */
-  padding: 1rem; /* Add some padding for spacing */
-  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 const MenuContainer = styled.div`
-  padding-right: 10rem; /* Add padding to the right of the menu */
+    @media (max-width: 768px) {
+        display: none; /* Hide menu on small screens */
+    }
+    padding-left: 20px; /* Add padding to the left of menu items */
 `;
 
 const Logo = styled.img``;

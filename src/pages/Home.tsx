@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 import logo from "../assets/Screenshot_2.png"; // Importing the image directly
@@ -10,9 +11,11 @@ const Home = () => {
                 <Title>Hi</Title>
                 <Description>
                     Hey there! Welcome to my website, where I share my journey as a programmer and showcase the projects I've been working on.
-                    <p></p>
+                </Description>
+                <Description>
                     Come explore with me as I dive into the fascinating world of coding, sharing stories of challenges, triumphs, and everything in between.
-                    <p></p> 
+                </Description>
+                <Description>
                     Let's connect, learn, and grow together as we navigate the ever-evolving landscape of technology.
                 </Description>
             </Content>
