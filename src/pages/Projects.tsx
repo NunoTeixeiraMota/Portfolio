@@ -59,7 +59,7 @@ const Languages = ({ projectUrl }: { projectUrl: string }) => {
         const fetchLanguages = async () => {
             try {
                 const response = await axios.get(projectUrl);
-                const languagesData = Object.entries(response.data);
+                const languagesData = Object.entries(response.data) as Array<[string, any]>;
                 const sortedLanguages = languagesData.sort((a, b) => b[1] - a[1]);
                 const topLanguages = sortedLanguages.slice(0, 3).map(([lang, _]) => lang);
                 setLanguages(topLanguages);
