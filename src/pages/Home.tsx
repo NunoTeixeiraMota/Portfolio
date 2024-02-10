@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const logo = '../src/assets/ScreenShot_2.png';
+const logo = '/vite-project/src/assets/Screenshot_2.png';
 
 const Home = () => {
     return (
@@ -33,7 +33,7 @@ const Container = styled.div`
 `;
 
 const Logo = styled.img`
-    width: 275px;
+    width: 250px;
     height: auto;
     border-radius: 20%;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
