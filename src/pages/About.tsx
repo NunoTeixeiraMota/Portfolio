@@ -37,21 +37,22 @@ const About = () => {
 };
 
 const Container = styled.div`
-  text-align: center;
+  background-color: rgba(36, 36, 36, 0.5); /* White-gray transparent background */
   padding: 2rem;
+  padding-top: 0; /* Remove top padding */
+  border-radius: 20px;
 `;
 
 const Title = styled.h2`
   font-size: 2rem;
-  color: #333;
+  color: white ; /* Change color to blue */
 `;
 
 const Description = styled.div`
   font-size: 1.2rem;
-  color: #666;
+  color: white; /* Change color to white */
   margin-top: 1rem;
 `;
-
 
 const Info = styled.p`
   text-align: left;

@@ -1,11 +1,14 @@
 import './Contact.css'; // Import the CSS file
+import logo from "../assets/contact.png"; // Importing the image directly
 
 const Contact = () => {
     return (
         <div className="contact-container">
             <div className="contact-header">
+            <h1>Contact Information</h1>
+            <img src={logo} alt="Logo" />
+
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link>
-                <h1>Contact Information</h1>
             </div>
             <div className="contact-content">
                 <div className="contact-info">
