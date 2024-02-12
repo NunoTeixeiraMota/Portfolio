@@ -16,7 +16,7 @@ function App() {
     ];
 
     const location = useLocation();
-    const [activeLink, setActiveLink] = useState(location.pathname);
+    const [activeLink,setActiveLink] = useState(location.pathname);
 
     useEffect(() => {
         setActiveLink(location.pathname);
@@ -51,7 +51,7 @@ function App() {
 
     return (
         <div className="App">
-            <Navbar links={links} />
+            <Navbar links={links} activeLink={activeLink} />
             <div className="page-content">
                 <div id="home"><Home /></div>
                 <div id="about"><About /></div>

@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 import logo from "../assets/Screenshot_2.png"; // Importing the image directly
