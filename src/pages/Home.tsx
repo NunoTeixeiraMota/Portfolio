@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 import logo from "../assets/Screenshot_2.png"; // Importing the image directly
@@ -30,8 +31,7 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
-
+    height: 100vh; /* Set the height to 100% of viewport height */
     @media (max-width: 768px) {
         flex-direction: column;
         text-align: center;

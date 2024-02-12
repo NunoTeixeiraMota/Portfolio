@@ -27,7 +27,7 @@ const Projects = () => {
     }, []);
 
     return (
-        <div>
+        <div className='containermaster'>
             <div className="project-container">
                 {projects.map((project) => (
                     <a

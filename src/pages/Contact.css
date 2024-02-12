@@ -1,54 +1,54 @@
 /* Contact.css */
 
 .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    padding-top: 5vh; /* Adjust the padding-top as needed */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     font-family: Arial, sans-serif;
-    text-align: center; /* Center the content */
-    
+    text-align: center;
 }
 
 .contact-header h1 {
-    margin-bottom: 20px; /* Add space below the header */
+    margin-bottom: 20px;
     color: white;
 }
 
-.contact-content {
-    text-align: left; /* Align content to the left within the centered container */
+.contact-header img {
+    width: auto;
+    height: auto;
 }
 
-.contact-info {
-    margin-top: 20px;
+.contact-content {
+    margin-top: 20px; /* Adjust margin-top as needed */
+    text-align: left;
 }
 
 .contact-info ul {
-    list-style-type: none; /* Remove the bullet points */
+    list-style-type: none;
     padding: 0;
-    display: flex; /* Use flexbox to make the items horizontal */
-    flex-direction: row; /* Stack items horizontally */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
 }
 
 .contact-info li {
-    margin-right: 20px; /* Add spacing between list items */
+    margin-bottom: 20px; /* Adjust margin-bottom as needed */
 }
 
 .contact-info span {
-    font-weight: bold; /* Make the labels bold */
-    margin-right: 10px; /* Add space between label and link */
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 .contact-info a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
 }
-
-.contact-info a:hover {
-    color: #0056b3;
-}
-
 
 .contact-info a:hover {
     color: #0056b3;

@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 const About = () => {
   return (
+    <ContainerContainer>
+            <Title>About Me</Title>
     <Container>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link>
-      <Title>About Me</Title>
       <Description>
         <Info>
           I'm Nuno, a 22-year-old full-stack developer from the beautiful town of Marco de Canaveses in Portugal. I graduated in Computer Engineering from ISEP (Instituto Superior de Engenharia do Porto), where I honed my skills in both front-end and back-end development.
@@ -33,10 +34,17 @@ const About = () => {
         </Contact>
       </Description>
     </Container>
+    </ContainerContainer>
   );
 };
-
+const ContainerContainer = styled.div`
+padding-top: 10rem;
+height: 100vh; /* Set the height to 100% of viewport height */
+  justify-content: center;
+  align-items: center;
+`;
 const Container = styled.div`
+
   background-color: rgba(36, 36, 36, 0.5); /* White-gray transparent background */
   padding: 2rem;
   padding-top: 0; /* Remove top padding */

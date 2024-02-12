@@ -1,32 +1,22 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './App.css';
-import Navbar from './navbar/navbar';
-import About from './pages/About'; // Import your About component
-import Projects from './pages/Projects'; // Import your Services component
-import Contact from './pages/Contact'; // Import your Contact component
-import Home from './pages/Home'; // Import your Home component
-import logo from './assets/logo.png'; // Import your logo directly
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Navbar from './navbar';
 
 function App() {
-    // Define your menu links, logo
     const links = [
-        { label: 'Home', to: '/'},
-        { label: 'About', to: '/about' },
-        { label: 'Projects', to: '/projects' },
-        { label: 'Contact', to: '/contact' }
+        { label: 'Home', to: '#home' },
+        { label: 'About', to: '#about' },
+        { label: 'Projects', to: '#projects' },
+        { label: 'Contact', to: '#contact' }
     ];
-    
-    // Get the current location using useLocation hook
+
     const location = useLocation();
-    
-    // State to store the active link
     const [activeLink, setActiveLink] = useState(location.pathname);
-    
-    // Update active link when location changes
-    useEffect(() => {
-        setActiveLink(location.pathname);
-    }, [location]);
 
     useEffect(() => {
         setActiveLink(location.pathname);
@@ -61,19 +51,14 @@ function App() {
 
     return (
         <div className="App">
-            
-            {/* Bubbles */}
-            <div className="text-container">
-            <Navbar links={links} logo={logo} activeLink={activeLink} />
-            {/* Add your routes */}
-            <Routes>
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/" element={<Home />} />
-            </Routes>
+            <Navbar links={links} />
+            <div className="page-content">
+                <div id="home"><Home /></div>
+                <div id="about"><About /></div>
+                <div id="projects"><Projects /></div>
+                <div id="contact"><Contact /></div>
+
             </div>
-            {/* Gradients container */}
             <div className="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -90,7 +75,6 @@ function App() {
                     <div className="g3"></div>
                     <div className="g4"></div>
                     <div className="g5"></div>
-                    {/* Interactive */}
                     <div className="interactive"></div>
                 </div>
             </div>
