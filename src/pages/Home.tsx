@@ -12,10 +12,10 @@ const Home = () => {
                 <Content>
                     <Title>Hi</Title>
                     <Description>
-                        Hey there! Welcome to my website, where I share my journey as a programmer and showcase the projects I've been working on.
+                       Welcome to my website, where I share my journey as a programmer and showcase the projects I've been working on.
                     </Description>
                     <Description>
-                        Come explore with me as I dive into the fascinating world of coding, sharing stories of challenges, triumphs, and everything in between.
+                        Student at ISEP Instituto Superior de Engenharia do Porto, but I'm always looking for new opportunities to learn and grow.
                     </Description>
                     <Description>
                         Let's connect, learn, and grow together as we navigate the ever-evolving landscape of technology.

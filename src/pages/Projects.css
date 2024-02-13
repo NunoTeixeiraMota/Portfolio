@@ -43,7 +43,7 @@
 
 @keyframes moveGradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 50%;        
     }
     50% {
         background-position: 100% 50%;
@@ -105,8 +105,7 @@ background-color: white;
 }
 
 .containermaster {
-    padding-top: 10rem;
-    height: 100vh; /* Set the height to 100% of viewport height */
-      justify-content: center;
-      align-items: center;
+    padding-top: 5rem;
+      height: 100vh; /* Set the height to 100% of viewport height */
+      padding-left: 5rem;
     }
