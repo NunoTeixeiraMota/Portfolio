@@ -35,12 +35,13 @@
 }
 
 .contact-info li {
-    margin-bottom: 20px; /* Adjust margin-bottom as needed */
+    font-size: 1.5em;
 }
 
 .contact-info span {
     font-weight: bold;
     margin-right: 10px;
+    font-size: 2rem;
 }
 
 .contact-info a {

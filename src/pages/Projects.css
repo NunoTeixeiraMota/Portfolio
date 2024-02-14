@@ -19,6 +19,12 @@
     background-color:rgba(36, 36, 36, 0.5);;
     box-shadow: 0px 25px 20px 15px #080808c5;
 }
+.project-card:hover {
+    transform: scale(1.05) perspective(1000px) rotateY(3deg);
+    box-shadow: none; /* Remove the box shadow on hover */
+}
+
+
 
 .project-card::after {
     content: '';
@@ -105,7 +111,9 @@ background-color: white;
 }
 
 .containermaster {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    height: 100vh; /* Set the height to 100% of viewport height */
     padding-top: 5rem;
-      height: 100vh; /* Set the height to 100% of viewport height */
-      padding-left: 5rem;
-    }
+}

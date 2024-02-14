@@ -10,7 +10,7 @@ import Navbar from './navbar';
 function App() {
     const links = [
         { label: 'Home', to: '#home' },
-        { label: 'About', to: '#about' },
+        { label: 'Experience', to: '#about' },
         { label: 'Projects', to: '#projects' },
         { label: 'Contact', to: '#contact' }
     ];
