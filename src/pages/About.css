@@ -1,0 +1,23 @@
+.TechCard {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    min-width: 10rem;
+}
+
+.techcontainer {
+    overflow: hidden;
+}
+
+.techlist {}
+
+.roadmap {
+    flex-direction: column;
+    top: 50%;
+    bottom: 50%;
+}
+
+.leftsection {
+    text-align: start;
+    grid-auto-flow: row;
+}

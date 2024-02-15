@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './App.css';
 import About from './pages/About';
@@ -15,12 +15,6 @@ function App() {
         { label: 'Contact', to: '#contact' }
     ];
 
-    const location = useLocation();
-    const [activeLink,setActiveLink] = useState(location.pathname);
-
-    useEffect(() => {
-        setActiveLink(location.pathname);
-    }, [location]);
 
     useEffect(() => {
         const interBubble = document.querySelector<HTMLDivElement>('.interactive')!;
@@ -51,7 +45,7 @@ function App() {
 
     return (
         <div className="App">
-            <Navbar links={links} activeLink={activeLink} />
+            <Navbar links={links}/>
             <div className="page-content">
                 <div id="home"><Home /></div>
                 <div id="about"><About /></div>

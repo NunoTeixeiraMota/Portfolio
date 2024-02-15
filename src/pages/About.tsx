@@ -1,3 +1,4 @@
+import './About.css';
 import styled from 'styled-components';
 
 const About = () => {
@@ -13,10 +14,10 @@ const About = () => {
   return (
     <ContarinerM>
       <Container>
-        <LeftSection>
+        <LeftSection className="leftsection">
           <Title>Life Road Map</Title>
           <Trajectory>
-            <RoadMap>
+            <RoadMap className="roadmap">
               <CheckPoint>
                 <CheckPointTitle>Born</CheckPointTitle>
                 <CheckPointDescription>Marco de Canaveses, Portugal</CheckPointDescription>
@@ -33,12 +34,12 @@ const About = () => {
           </Trajectory>
         </LeftSection>
         <RightSection>
-          <TechStack>
+          <TechStack className="techcontainer">
             <Title>Technologies I Work With:</Title>
-            <TechList>
+            <TechList className="techlist">
               {technologies.map((tech, index) => (
                 <TechItem key={index}>
-                  <TechCard>
+                  <TechCard className="TechCard">
                     <Icon className={`${tech.icon}`} />
                     <TechName>{tech.name}</TechName>
                   </TechCard>
