@@ -9,7 +9,6 @@ import './navbar.css'
 // Define NavbarProps interface
 interface NavbarProps {
     links: { label: string; to: string }[];
-    activeLink: string;
 }
 
 // Define Navbar functional component

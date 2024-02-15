@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import './App.css';
 import About from './pages/About';
 import Projects from './pages/Projects';
