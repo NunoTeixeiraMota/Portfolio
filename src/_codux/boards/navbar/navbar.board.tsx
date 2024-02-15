@@ -3,7 +3,7 @@ import Navbar from '../../../navbar';
 
 export default createBoard({
     name: 'Navbar',
-    Board: () => <Navbar />,
+    Board: () => <Navbar links={[]} />,
     isSnippet: true,
     environmentProps: {
 windowWidth: 1024
