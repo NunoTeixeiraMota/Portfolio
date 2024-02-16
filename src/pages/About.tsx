@@ -8,73 +8,71 @@ const About = () => {
     { name: "MongoDB & SQL", icon: "fas fa-database" },
     { name: "Typescript & JavaScript", icon: "fab fa-js" },
     { name: "C", icon: "fas fa-c" },
-    { name: "Python", icon: "fab fa-python" }
+    { name: "Python", icon: "fab fa-python" },
   ];
 
   return (
-    <ContarinerM>
-      <Container>
-        <LeftSection className="leftsection">
-          <Title>Life Road Map</Title>
-          <Trajectory>
-            <RoadMap className="roadmap">
-              <CheckPoint>
-                <CheckPointTitle>Born</CheckPointTitle>
-                <CheckPointDescription>Marco de Canaveses, Portugal</CheckPointDescription>
-              </CheckPoint>
-              <CheckPoint>
-                <CheckPointTitle>Study</CheckPointTitle>
-                <CheckPointDescription>Computer Engineering at ISEP, Porto</CheckPointDescription>
-              </CheckPoint>
-              <CheckPoint>
-                <CheckPointTitle>Projects</CheckPointTitle>
-                <CheckPointDescription>Relevant projects description here</CheckPointDescription>
-              </CheckPoint>
-            </RoadMap>
-          </Trajectory>
-        </LeftSection>
-        <RightSection>
-          <TechStack className="techcontainer">
-            <Title>Technologies I Work With:</Title>
-            <TechList className="techlist">
-              {technologies.map((tech, index) => (
-                <TechItem key={index}>
-                  <TechCard className="TechCard">
-                    <Icon className={`${tech.icon}`} />
-                    <TechName>{tech.name}</TechName>
-                  </TechCard>
-                </TechItem>
-              ))}
-            </TechList>
-          </TechStack>
-        </RightSection>
-      </Container>
-    </ContarinerM>
+    <Container>
+      <LeftSection>
+      <Title style={{ textAlign: "center" }}>Life Map</Title>
+        <Trajectory>
+          <RoadMap>
+            <CheckPoint>
+              <CheckPointTitle>Born</CheckPointTitle>
+              <CheckPointDescription>Porto Portugal</CheckPointDescription>
+            </CheckPoint>
+            <CheckPoint>
+              <CheckPointTitle>School</CheckPointTitle>
+              <CheckPointDescription>Esc. Sec. de Marco de Canaveses</CheckPointDescription>
+            </CheckPoint>
+            <CheckPoint>
+              <CheckPointTitle>University</CheckPointTitle>
+              <CheckPointDescription>Computer Engineering at ISEP, Porto</CheckPointDescription>
+            </CheckPoint>
+          </RoadMap>
+        </Trajectory>
+      </LeftSection>
+      <RightSection>
+        <TechStack>
+        <Title style={{ textAlign: "left", fontSize: "1rem", color: "rgba(255, 255, 255, 0.25)" }}>Technologies I Work With:</Title>
+          <TechList>
+            {technologies.map((tech, index) => (
+              <TechItem key={index}>
+                <TechCard>
+                  <Icon className={`${tech.icon}`} />
+                  <TechName>{tech.name}</TechName>
+                </TechCard>
+              </TechItem>
+            ))}
+          </TechList>
+        </TechStack>
+      </RightSection>
+    </Container>
   );
 };
 
-const ContarinerM = styled.div`
+const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   width: 100%;
-`;
-
-const Container = styled.div`
-  background-color: rgba(36, 36, 36, 0.5);
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  border-radius: 20px;
-`;
+  padding-top: 10rem;
+  `;
 
 const LeftSection = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const RightSection = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Title = styled.h2`

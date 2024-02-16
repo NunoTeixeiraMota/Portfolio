@@ -9,15 +9,25 @@
     overflow: hidden;
 }
 
-.techlist {}
-
 .roadmap {
     flex-direction: column;
-    top: 50%;
-    bottom: 50%;
-}
-
-.leftsection {
+  }
+  
+  .leftsection {
     text-align: start;
-    grid-auto-flow: row;
-}
+  }
+  .techlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .techcontainer {
+    overflow: hidden;
+  }
+  
+  .TechCard {
+    flex-direction: column;
+    align-items: center;
+    min-width: 10rem;
+  }

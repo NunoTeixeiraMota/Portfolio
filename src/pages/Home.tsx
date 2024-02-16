@@ -12,13 +12,13 @@ const Home = () => {
                 <Content>
                     <Title>Hi</Title>
                     <Description>
-                       Welcome to my website, where I share my journey as a programmer and showcase the projects I've been working on.
+                        I'm Nuno, a full-stack developer based in Porto, Portugal.
                     </Description>
                     <Description>
-                        Student at ISEP Instituto Superior de Engenharia do Porto, but I'm always looking for new opportunities to learn and grow.
+                        Student at ISEP Instituto Superior de Engenharia do Porto.
                     </Description>
                     <Description>
-                        Let's connect, learn, and grow together as we navigate the ever-evolving landscape of technology.
+                        Crafting digital solutions from front to back.
                     </Description>
                 </Content>
             </ContentContainer>
