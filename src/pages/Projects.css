@@ -70,8 +70,9 @@
 }
 
 .project-title-container {
-background-color: white;
+  background-color: white; /* White color with 50% opacity */
 }
+
 .project-title {
     margin-top: 0;
     margin-bottom: 10px;

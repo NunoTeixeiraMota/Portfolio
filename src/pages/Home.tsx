@@ -78,6 +78,7 @@ const Home = () => {
 };
 
 const FSD = styled.h1`
+color: white; /* Change color to white */
   padding: 1px; /* Adjust padding as needed */
   border-radius: 20px; /* Rounded corners */
   margin-top: 0; /* Remove default margin */
@@ -162,6 +163,7 @@ const BoxTitle = styled.h2`
 
 const BoxContent = styled.p`
   font-size: 1rem;
+  color : white;
 `;
 
 export default Home;
