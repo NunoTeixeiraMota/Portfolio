@@ -36,14 +36,14 @@
     z-index: 0;
     margin: -2px; /* Pull the pseudo-element just outside the project-card boundaries */
     border-radius: inherit; /* If your .project-card has a border-radius */
-    background: linear-gradient(60deg, red, orange, blue, indigo, red, orange, yellow, blue, indigo, violet);
+    background: linear-gradient(60deg, red, orange, blue, indigo, red, orange, blue, indigo, violet);
     background-size: 300% 300%; /* Large size to allow for the background-position animation */
     opacity: 0;
     transition: opacity 0.5s, transform 0.5s; /* Set the transition for the opacity */
 }
 
 .project-card:hover::after {
-    opacity: 0.3; /* Make the pseudo-element visible with the gradient visible */
+    opacity: 0.15; /* Make the pseudo-element visible with the gradient visible */
     animation: moveGradient 4s linear infinite;
 }
 

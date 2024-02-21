@@ -3,7 +3,6 @@
 // Import React and NavLink
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from './assets/logo.png';
 import './navbar.css'
 
 // Define NavbarProps interface
@@ -24,7 +23,6 @@ const Navbar: React.FC<NavbarProps> = ({ links }) => {
     return (
         // Navbar JSX
         <nav>
-            <img src={logo} alt="logo" />
             <ul>
                 {links.map((link, index) => (
                     <li key={index}>

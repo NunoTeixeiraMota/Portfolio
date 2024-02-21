@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import About from './pages/About';
 import Projects from './pages/Projects';
@@ -14,6 +14,9 @@ function App() {
         { label: 'Contact', to: '#contact' }
     ];
 
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true); // Initially set to true
+
+    const navbarRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const interBubble = document.querySelector<HTMLDivElement>('.interactive')!;
@@ -42,15 +45,38 @@ function App() {
         };
     }, []);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setIsNavbarVisible(false); // Hide Navbar when not in view
+                } else {
+                    setIsNavbarVisible(true); // Show Navbar when in view
+                }
+            });
+        });
+
+        if (navbarRef.current) {
+            observer.observe(navbarRef.current);
+        }
+
+        return () => {
+            if (navbarRef.current) {
+                observer.unobserve(navbarRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div className="App">
-            <Navbar links={links}/>
+            <div ref={navbarRef}>
+                {isNavbarVisible && <Navbar links={links} />}
+            </div>
             <div className="page-content">
                 <div id="home"><Home /></div>
                 <div id="about"><About /></div>
                 <div id="projects"><Projects /></div>
                 <div id="contact"><Contact /></div>
-
             </div>
             <div className="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">

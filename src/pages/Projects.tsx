@@ -1,4 +1,4 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Projects.css';
 
@@ -7,8 +7,15 @@ interface Project {
     name: string;
     html_url: string;
     languages_url: string;
-    // Add more properties as needed
+    description: string; // Add the description property
+
 }
+const projectDescriptions: { [repoName: string]: string } = {
+    "repo1": "A fantastic project that does amazing things.",
+    "repo2": "Another cool project with exciting features.",
+    // ...add more descriptions here
+    "default": "A great project by NunoTeixeiraMota." // Default if no match is found
+};
 
 const Projects = () => {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -38,13 +45,23 @@ const Projects = () => {
                         className="project-link"
                     >
                         <div className="project-card">
-                            <div className="project-title-container">
-                                <span className="project-title">{project.name}</span>
-                            </div>
-                            <div className="project-languages">
-                                {project.languages_url && <Languages projectUrl={project.languages_url} />}
+                            <div className="project-card-inner">
+                                <div className="project-card-front">
+                                    <div className="project-title-container">
+                                        <span className="project-title">{project.name}</span>
+                                    </div>
+                                    <div className="project-languages">
+                                        {project.languages_url && <Languages projectUrl={project.languages_url} />}
+                                    </div>
+                                    <div className="project-card-back">
+                                        <div className="project-description">
+                                            {projectDescriptions[project.name] || projectDescriptions["default"]}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </a>
                 ))}
             </div>
