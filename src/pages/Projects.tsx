@@ -10,12 +10,7 @@ interface Project {
     description: string; // Add the description property
 
 }
-const projectDescriptions: { [repoName: string]: string } = {
-    "repo1": "A fantastic project that does amazing things.",
-    "repo2": "Another cool project with exciting features.",
-    // ...add more descriptions here
-    "default": "A great project by NunoTeixeiraMota." // Default if no match is found
-};
+
 
 const Projects = () => {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -55,7 +50,6 @@ const Projects = () => {
                                     </div>
                                     <div className="project-card-back">
                                         <div className="project-description">
-                                            {projectDescriptions[project.name] || projectDescriptions["default"]}
                                         </div>
                                     </div>
                                 </div>
