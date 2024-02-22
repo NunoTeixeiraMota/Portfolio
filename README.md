@@ -41,5 +41,3 @@ Cobux is integrated into the project for code formatting and linting. It ensures
 Vercel is used for deploying the website. It offers seamless deployment workflows, automatic CI/CD, and scalability for static sites. Deployments are triggered automatically upon pushing changes to the `main` branch, ensuring a smooth development and deployment process. 🚀
 
 ---
-
-Feel free to copy this markdown code block and paste it into your README.md file! Let me know if you need further assistance! 👍
