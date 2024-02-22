@@ -144,6 +144,7 @@ const BoxContainer = styled.div`
 `;
 
 const Box = styled.div`
+  padding: 0.75rem;
   background-color: rgba(36, 36, 36, 0.5); /* White-gray transparent background */
   border-radius: 10px;
   cursor: pointer;

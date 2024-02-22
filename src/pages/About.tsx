@@ -116,9 +116,8 @@ const TechStack = styled.div`
 
 const TechList = styled.ul`
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
 `;
 
@@ -130,7 +129,7 @@ const TechItem = styled.li`
 const TechCard = styled.div`
   background-color: rgba(36, 36, 36, 0.5);
   border-radius: 8px;
-  padding: 1em;
+  padding: 0.75em;
   display: flex;
   flex-direction: column;
   align-items: center;

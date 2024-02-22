@@ -118,3 +118,26 @@
     height: 100vh; /* Set the height to 100% of viewport height */
     padding-top: 5rem;
 }
+.project-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Semi-transparent black background */
+    color: white;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 1; /* Initially hidden */
+    transition: opacity 0.3s ease;
+    font-size: 0.7em;
+}
+
+.project-description {
+    white-space: pre-line; /* Preserve line breaks and spaces */
+}
+
+
