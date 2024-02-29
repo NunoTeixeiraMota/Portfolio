@@ -1,34 +1,34 @@
 import './Contact.css'; // Import the CSS file
-import logo from "../assets/contact.png"; // Importing the image directly
 
 const Contact = () => {
     return (
-        <div className="contact-container">
-            <div className="contact-header">
-            <h1>Contact Information</h1>
-            <img src={logo} alt="Logo" />
-
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link>
-            </div>
-            <div className="contact-content">
-                <div className="contact-info">
-                    <ul>
-                        <li>
-                            <span><i className="fas fa-envelope"></i></span>
-                            <a href="mailto:jnmteixeira@gmail.com">jnmteixeira@gmail.com</a>
-                        </li>
-                        <li>
-                            <span><i className="fab fa-linkedin"></i></span>
-                            <a href="https://www.linkedin.com/in/josé-teixeiramt" target="_blank" rel="noopener noreferrer">José Teixeira</a>
-                        </li>
-                        <li>
-                            <span><i className="fas fa-phone"></i></span>
-                            <a href="tel:+351915558601">+351 915 558 601</a>
-                        </li>
-                    </ul>
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <input type="hidden" name="access_key" value="c4cf5c9d-d2a5-485a-b5b4-82940c6e3e10" />
+                <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                <input type="hidden" name="redirect" value="https://portfolio-nunoteixeiramotas-projects.vercel.app/" />
+                <input type="checkbox" name="botcheck" id="" style={{ display: 'none' }} />
+                <div>
+                    <label htmlFor="name">Full Name</label><br />
+                    <input type="text" name="name" id="name" placeholder="John" required />
+                    <br /><br />
                 </div>
-            </div>
-        </div>
+                <div>
+                    <label htmlFor="email">Email Address</label><br />
+                    <input type="email" name="email" id="email" placeholder="you@company.com" required /><br /><br />
+                </div>
+                <div>
+                    <label htmlFor="phone">Phone Number</label><br />
+                    <input type="text" name="phone" id="phone" placeholder="+351 911-111-111" required /><br /><br />
+                </div>
+                <div>
+                    <label htmlFor="message">Your Message</label><br />
+                    <textarea rows={5} name="message" id="message" placeholder="Your Message" required></textarea><br /><br />
+                </div>
+                <button type="submit">Send Message</button>
+            </fieldset>
+        </form>
     );
 };
 

@@ -1,56 +1,71 @@
-/* Contact.css */
-
-.contact-container {
-    padding-top: 5vh; /* Adjust the padding-top as needed */
-    height: 100vh;
+#form {
+    background-color: rgba(36, 36, 36, 0.5);
+    /* White-gray transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    font-family: Arial, sans-serif;
-    text-align: center;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: space-between;
 }
 
-.contact-header h1 {
-    margin-bottom: 20px;
+fieldset {
+    border: none;
+    width: 100%;
+    /* Ensure the fieldset takes up the full width */
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: white;
 }
 
-.contact-header img {
-    width: auto;
-    height: auto;
+.input-container {
+    width: calc(50% - 15px);
+    /* Adjust the width as needed */
+    box-sizing: border-box;
 }
 
-.contact-content {
-    margin-top: 20px; /* Adjust margin-top as needed */
-    text-align: left;
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: calc(100% - 80px);
+    /* Adjust the width as needed */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    /* Allow vertical resizing */
 }
 
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
+.button-container {
+    width: 100%;
+    text-align: right;
 }
 
-.contact-info li {
-    font-size: 1.5em;
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.contact-info span {
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
     font-weight: bold;
-    margin-right: 10px;
-    font-size: 2rem;
+    color: white;
 }
 
-.contact-info a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-    white-space: nowrap;
-}
-
-.contact-info a:hover {
-    color: #0056b3;
-}

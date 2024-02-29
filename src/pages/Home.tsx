@@ -66,10 +66,15 @@ const Home = () => {
                         <BoxTitle><FontAwesomeIcon icon={faBriefcase} size="2x" color="white" /></BoxTitle>
                         <BoxContent>See my projects.</BoxContent>
                     </Box>
-                    {/* Add more boxes here */}
-                    <Box onClick={() => scrollToSection("contact")}>
+                    {/* LinkedIn Box */}
+                    <Box onClick={() => window.open("https://www.linkedin.com/in/josé-teixeiramt", "_blank")}>
                         <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
-                        <BoxContent>Get in touch.</BoxContent>
+                        <BoxContent>LinkedIn</BoxContent>
+                    </Box>
+                    {/* GitHub Box */}
+                    <Box onClick={() => window.open("https://github.com/NunoTeixeiraMota", "_blank")}>
+                        <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
+                        <BoxContent>GitHub</BoxContent>
                     </Box>
                 </BoxContainer>
             </FlexContainer>
@@ -77,94 +82,93 @@ const Home = () => {
     );
 };
 
+
 const FSD = styled.h1`
-color: white; /* Change color to white */
-  padding: 1px; /* Adjust padding as needed */
-  border-radius: 20px; /* Rounded corners */
-  margin-top: 0; /* Remove default margin */
+    color: white;
+    padding: 1px;
+    border-radius: 20px;
+    margin-top: 0;
 `;
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Set the height to 100% of viewport height */
-  flex-direction: column; /* Change to column layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 `;
 
 const FlexContainer = styled.div`
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 `;
 
 const Logo = styled.img`
-  width: 250px;
-  height: auto;
-  border-radius: 20%;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  margin-bottom: 1rem;
+    width: 250px;
+    height: auto;
+    border-radius: 20%;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 1rem;
 `;
 
 const ContentContainer = styled.div`
-  background-color: rgba(36, 36, 36, 0.5); /* White-gray transparent background */
-  padding: 1rem;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: row; /* Align items horizontally */
-  margin-top: 2rem; /* Add margin to separate from logo */
+    background-color: rgba(36, 36, 36, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2rem;
 `;
 
 const LogoContainer = styled.div`
-  margin-right: 1rem;
+    margin-right: 1rem;
 `;
 
 const Content = styled.div`
-  text-align: left;
+    text-align: left;
 `;
 
 const Title = styled.h1`
-  font-size: 2.5rem;
-  color: white; /* Change color to white */
+    font-size: 2.5rem;
+    color: white;
 `;
 
 const Description = styled.p`
-  font-size: 1.2rem;
-  color: white; /* Change color to white */
-  margin-top: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 1rem;
 `;
 
 const BoxContainer = styled.div`
-  padding-top: 2.5rem; /* Add padding to separate from ContentContainer */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30%;
-  margin-left: 2rem; /* Add margin to separate from ContentContainer */
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    margin-left: 2rem;
 `;
 
 const Box = styled.div`
-  padding: 0.75rem;
-  background-color: rgba(36, 36, 36, 0.5); /* White-gray transparent background */
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 1rem; /* Add margin between the boxes */
-  &:hover {
-    transform: translateY(-5px) rotateX(10deg) rotateY(5deg);
-    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-  }
+    padding: 0.75rem;
+    background-color: rgba(36, 36, 36, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    &:hover {
+        transform: translateY(-5px) rotateX(10deg) rotateY(5deg);
+        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
+    }
 `;
 
-
-
 const BoxTitle = styled.h2`
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
 `;
 
 const BoxContent = styled.p`
-  font-size: 1rem;
-  color : white;
+    font-size: 1rem;
+    color : white;
 `;
 
 export default Home;
