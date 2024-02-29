@@ -60,21 +60,16 @@ const Home = () => {
                 <BoxContainer>
                     <Box onClick={() => scrollToSection("about")}>
                         <BoxTitle><FontAwesomeIcon icon={faAddressCard} size="2x" color="white" /></BoxTitle>
-                        <BoxContent>Learn about me.</BoxContent>
+                        <BoxContent>Learn about me</BoxContent>
                     </Box>
                     <Box onClick={() => scrollToSection("projects")}>
                         <BoxTitle><FontAwesomeIcon icon={faBriefcase} size="2x" color="white" /></BoxTitle>
-                        <BoxContent>See my projects.</BoxContent>
+                        <BoxContent>See my projects</BoxContent>
                     </Box>
                     {/* LinkedIn Box */}
-                    <Box onClick={() => window.open("https://www.linkedin.com/in/josé-teixeiramt", "_blank")}>
+                    <Box onClick={() => scrollToSection("contact")}>
                         <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
-                        <BoxContent>LinkedIn</BoxContent>
-                    </Box>
-                    {/* GitHub Box */}
-                    <Box onClick={() => window.open("https://github.com/NunoTeixeiraMota", "_blank")}>
-                        <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
-                        <BoxContent>GitHub</BoxContent>
+                        <BoxContent>Contact me</BoxContent>
                     </Box>
                 </BoxContainer>
             </FlexContainer>
@@ -112,8 +107,8 @@ const Logo = styled.img`
 `;
 
 const ContentContainer = styled.div`
-    background-color: rgba(36, 36, 36, 0.5);
-    padding: 1rem;
+background: linear-gradient(135deg, rgba(125, 72, 177, 0.5) 0%, rgba(110, 52, 165, 0.5) 100%);
+padding: 1rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -150,8 +145,8 @@ const BoxContainer = styled.div`
 `;
 
 const Box = styled.div`
-    padding: 0.75rem;
-    background-color: rgba(36, 36, 36, 0.5);
+    padding: 0.25rem;
+    background: linear-gradient(135deg, rgba(125, 72, 177, 0.2) 0%, rgba(110, 52, 165, 0.2) 100%);
     border-radius: 10px;
     cursor: pointer;
     margin-bottom: 1rem;
