@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import logo from "../assets/Screenshot_2.png"; // Importing the image directly
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAddressCard, faBriefcase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import styled from 'styled-components';
 
 const Home = () => {
     // Function to scroll to a section
@@ -144,17 +144,21 @@ const BoxContainer = styled.div`
     margin-left: 2rem;
 `;
 
+
 const Box = styled.div`
-    padding: 0.25rem;
-    background: linear-gradient(135deg, rgba(125, 72, 177, 0.2) 0%, rgba(110, 52, 165, 0.2) 100%);
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    &:hover {
-        transform: translateY(-5px) rotateX(10deg) rotateY(5deg);
-        box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 1);
-    }
+  padding: 0.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  position: relative;
+  background: linear-gradient(135deg, rgba(125, 72, 177, 0.1) 0%, rgba(110, 52, 165, 0.1) 100%);
+  transition: box-shadow 0.3s ease; /* Add transition for the box-shadow property */
+
+  &:hover {
+    box-shadow: 0 0 20px 5px rgba(125, 72, 177, 0.9); /* Add the glowing effect on hover */
+  }
 `;
+
 
 const BoxTitle = styled.h2`
     font-size: 1rem;

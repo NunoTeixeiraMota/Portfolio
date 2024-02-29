@@ -1,20 +1,40 @@
 import './About.css';
 import styled from 'styled-components';
+import { FaNodeJs, FaReact, FaJs, FaPython,FaJava } from 'react-icons/fa';
+import { SiTypescript } from "react-icons/si";
+import { BiLogoMongodb } from "react-icons/bi";
+import { PiFileSqlDuotone } from "react-icons/pi";
+import { FaAngular } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+import { FaLinux } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
+
+
+
+
 
 const About = () => {
   const technologies = [
-    { name: "Node.js", icon: "fab fa-node-js" },
-    { name: "React", icon: "fab fa-react" },
-    { name: "MongoDB & SQL", icon: "fas fa-database" },
-    { name: "Typescript & JavaScript", icon: "fab fa-js" },
-    { name: "C", icon: "fas fa-c" },
-    { name: "Python", icon: "fab fa-python" },
+    { name: "Node.js", icon: FaNodeJs },
+    { name: "React", icon: FaReact },
+    { name: "Angular", icon: FaAngular },
+    { name: "JavaScript", icon: FaJs },
+    { name: "Typescript", icon: SiTypescript },
+    { name: "MongoDB", icon: BiLogoMongodb },
+    { name: " SQL", icon: PiFileSqlDuotone },
+    { name: "Git", icon: FaGitAlt },
+    { name: "Python", icon: FaPython },
+    { name: "Java", icon: FaJava },
+    { name: "Linux", icon: FaLinux },
+    { name: "Postman", icon: SiPostman }
   ];
+  
+  
 
   return (
     <Container>
       <LeftSection>
-      <Title style={{ textAlign: "center" }}>Life Map</Title>
+        <Title style={{ textAlign: "center" }}>Life Map</Title>
         <Trajectory>
           <RoadMap>
             <CheckPoint>
@@ -34,12 +54,13 @@ const About = () => {
       </LeftSection>
       <RightSection>
         <TechStack>
-        <Title style={{ textAlign: "left", fontSize: "1rem", color: "rgba(255, 255, 255, 0.25)" }}>Technologies I Work With:</Title>
+          <Title style={{ textAlign: "left", fontSize: "1rem", color: "rgba(255, 255, 255, 0.25)" }}>Technologies I Work With:</Title>
           <TechList>
             {technologies.map((tech, index) => (
               <TechItem key={index}>
                 <TechCard>
-                  <Icon className={`${tech.icon}`} />
+                  {tech.icon && <Icon>{<tech.icon size={64} />}</Icon>}
+                  {!tech.icon && <CustomIcon>C</CustomIcon>}
                   <TechName>{tech.name}</TechName>
                 </TechCard>
               </TechItem>
@@ -58,8 +79,8 @@ const Container = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  padding-top: 10rem;
-  `;
+  padding-top: 5rem;
+`;
 
 const LeftSection = styled.div`
   flex: 1;
@@ -112,8 +133,6 @@ const TechStack = styled.div`
   margin-bottom: 1rem;
 `;
 
-
-
 const TechList = styled.ul`
   list-style: none;
   display: flex;
@@ -129,11 +148,12 @@ const TechItem = styled.li`
 const TechCard = styled.div`
   background-color: rgba(36, 36, 36, 0.5);
   border-radius: 8px;
-  padding: 0.75em;
+  padding: 1em; /* Adjust padding to ensure all cards have the same size */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 150px; /* Set a fixed width for all cards */
 `;
 
 const TechName = styled.span`
@@ -141,11 +161,14 @@ const TechName = styled.span`
   margin-top: 0.5em;
 `;
 
-const Icon = styled.i`
-  font-size: 7rem;
+const Icon = styled.span`
+  font-size: 4rem; /* Increase the icon size */
   color: white;
-  width: 1.3em;
-  height: 1em;
+`;
+
+const CustomIcon = styled.span`
+  font-size: 4rem; /* Adjust the size to match the icon size */
+  color: white;
 `;
 
 export default About;

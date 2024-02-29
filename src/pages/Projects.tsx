@@ -33,10 +33,10 @@ const Projects = () => {
     }, []);
 
     return (
-        
         <div className='containermaster'>
             <div className="project-container">
                 {projects.map((project) => (
+                    project.name !== 'NunoTeixeiraMota' &&
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
@@ -59,6 +59,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     const predefinedDescription = descriptions[project.name] || '';
 
     return (
+        
         <a
             href={project.html_url}
             target="_blank"
@@ -112,7 +113,7 @@ const Languages = ({ projectUrl }: { projectUrl: string }) => {
     }, [projectUrl]);
 
     return (
-        <>
+        <>  
             {languages.map((lang) => (
                 <div key={lang}>{lang}</div>
             ))}

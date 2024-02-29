@@ -6,7 +6,7 @@ const Contact = () => {
             <div className="contact-form">
                 <h2>Message</h2>
                 <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                    <input type="hidden" name="access_key" value="your_access_key" />
+                    <input type="hidden" name="access_key" value="c4cf5c9d-d2a5-485a-b5b4-82940c6e3e10" />
                     <input type="hidden" name="subject" value="New Submission from Web3Forms" />
                     <input type="hidden" name="redirect" value="your_redirect_url" />
                     <div className="input-group">
