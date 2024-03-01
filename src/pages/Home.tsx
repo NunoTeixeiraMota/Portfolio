@@ -10,30 +10,30 @@ const Home = () => {
         if (section) {
             const startPos = window.pageYOffset;
             const targetPos = section.getBoundingClientRect().top + window.pageYOffset;
-    
+
             const distance = targetPos - startPos;
             const duration = 800; // Adjust duration as needed
-    
+
             let start: number | null = null;
-    
+
             const step = (timestamp: number) => {
                 if (!start) start = timestamp;
                 const progress = timestamp - start;
                 const percentage = Math.min(progress / duration, 1);
-    
+
                 window.scrollTo(0, startPos + distance * easeInOutQuad(percentage));
-    
+
                 if (progress < duration) {
                     requestAnimationFrame(step);
                 } else {
                     window.location.hash = `#${id}`;
                 }
             };
-    
+
             requestAnimationFrame(step);
         }
     };
-    
+
     // Easing function for smooth animation
     function easeInOutQuad(t: number) {
         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
@@ -41,7 +41,29 @@ const Home = () => {
 
     return (
         <Container>
-            <FSD>Full Stack Developer</FSD>
+        <FSD>
+            <span>F</span>
+            <span>U</span>
+            <span>L</span>
+            <span>L</span>
+            <span>S</span>
+            <span>T</span>
+            <span>A</span>
+            <span>C</span>
+            <span>K</span>
+            <ReflectionWrapper>
+                <GradientText>F</GradientText>
+                <GradientText>U</GradientText>
+                <GradientText>L</GradientText>
+                <GradientText>L</GradientText>
+                <GradientText>S</GradientText>
+                <GradientText>T</GradientText>
+                <GradientText>A</GradientText>
+                <GradientText>C</GradientText>
+                <GradientText>K</GradientText>
+            </ReflectionWrapper>
+        </FSD>
+
             <FlexContainer>
                 <ContentContainer>
                     <LogoContainer>
@@ -58,16 +80,16 @@ const Home = () => {
                 </ContentContainer>
                 {/* Boxes with click functionality */}
                 <BoxContainer>
-                    <Box onClick={() => scrollToSection("about")}>
+                    <Box onClick={() => scrollToSection("about")} onMouseEnter={() => document.querySelector('.FSD').classList.add('hovered')} onMouseLeave={() => document.querySelector('.FSD').classList.remove('hovered')}>
                         <BoxTitle><FontAwesomeIcon icon={faAddressCard} size="2x" color="white" /></BoxTitle>
                         <BoxContent>Learn about me</BoxContent>
                     </Box>
-                    <Box onClick={() => scrollToSection("projects")}>
+                    <Box onClick={() => scrollToSection("projects")} onMouseEnter={() => document.querySelector('.FSD').classList.add('hovered')} onMouseLeave={() => document.querySelector('.FSD').classList.remove('hovered')}>
                         <BoxTitle><FontAwesomeIcon icon={faBriefcase} size="2x" color="white" /></BoxTitle>
                         <BoxContent>See my projects</BoxContent>
                     </Box>
                     {/* LinkedIn Box */}
-                    <Box onClick={() => scrollToSection("contact")}>
+                    <Box onClick={() => scrollToSection("contact")} onMouseEnter={() => document.querySelector('.FSD').classList.add('hovered')} onMouseLeave={() => document.querySelector('.FSD').classList.remove('hovered')}>
                         <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
                         <BoxContent>Contact me</BoxContent>
                     </Box>
@@ -78,11 +100,43 @@ const Home = () => {
 };
 
 
-const FSD = styled.h1`
+
+const FSD = styled.div`
+top: -5%;
     color: white;
-    padding: 1px;
-    border-radius: 20px;
-    margin-top: 0;
+    font-size: 8em;
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    /* CSS for hover effect */
+    span {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+
+    /* Define hover effect */
+    span:hover {
+        transform: translateY(-10px);
+    }
+`;
+
+const ReflectionWrapper = styled.div`
+    position: absolute;
+    bottom: -115px; /* Adjust the distance between main text and reflection */
+    left: 0;
+    width: 100%;
+    transform: scaleY(-1);
+    opacity: 0.5;
+`;
+
+const GradientText = styled.span`
+    background: linear-gradient(to top, rgba(125, 72, 177, 0.5) 0%, rgba(125, 72, 177, 0.2) 50%, rgba(125, 72, 177, 0) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
 `;
 
 const Container = styled.div`
@@ -107,8 +161,8 @@ const Logo = styled.img`
 `;
 
 const ContentContainer = styled.div`
-background: linear-gradient(135deg, rgba(125, 72, 177, 0.5) 0%, rgba(110, 52, 165, 0.5) 100%);
-padding: 1rem;
+    background: linear-gradient(135deg, rgba(125, 72, 177, 0.5) 0%, rgba(110, 52, 165, 0.5) 100%);
+    padding: 1rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -144,21 +198,19 @@ const BoxContainer = styled.div`
     margin-left: 2rem;
 `;
 
-
 const Box = styled.div`
-  padding: 0.25rem;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-bottom: 1rem;
-  position: relative;
-  background: linear-gradient(135deg, rgba(125, 72, 177, 0.1) 0%, rgba(110, 52, 165, 0.1) 100%);
-  transition: box-shadow 0.3s ease; /* Add transition for the box-shadow property */
+    padding: 0.25rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    position: relative;
+    background: linear-gradient(135deg, rgba(125, 72, 177, 0.1) 0%, rgba(110, 52, 165, 0.1) 100%);
+    transition: box-shadow 0.3s ease; /* Add transition for the box-shadow property */
 
-  &:hover {
-    box-shadow: 0 0 20px 5px rgba(125, 72, 177, 0.9); /* Add the glowing effect on hover */
-  }
+    &:hover {
+        box-shadow: 0 0 20px 5px rgba(125, 72, 177, 0.9); /* Add the glowing effect on hover */
+    }
 `;
-
 
 const BoxTitle = styled.h2`
     font-size: 1rem;
