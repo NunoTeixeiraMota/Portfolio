@@ -80,16 +80,16 @@ const Home = () => {
                 </ContentContainer>
                 {/* Boxes with click functionality */}
                 <BoxContainer>
-                    <Box onClick={() => scrollToSection("about")} onMouseEnter={() => document.querySelector('.FSD').classList.add('hovered')} onMouseLeave={() => document.querySelector('.FSD').classList.remove('hovered')}>
+                    <Box onClick={() => scrollToSection("about")}>
                         <BoxTitle><FontAwesomeIcon icon={faAddressCard} size="2x" color="white" /></BoxTitle>
                         <BoxContent>Learn about me</BoxContent>
                     </Box>
-                    <Box onClick={() => scrollToSection("projects")} onMouseEnter={() => document.querySelector('.FSD').classList.add('hovered')} onMouseLeave={() => document.querySelector('.FSD').classList.remove('hovered')}>
+                    <Box onClick={() => scrollToSection("projects")}>
                         <BoxTitle><FontAwesomeIcon icon={faBriefcase} size="2x" color="white" /></BoxTitle>
                         <BoxContent>See my projects</BoxContent>
                     </Box>
                     {/* LinkedIn Box */}
-                    <Box onClick={() => scrollToSection("contact")} onMouseEnter={() => document.querySelector('.FSD').classList.add('hovered')} onMouseLeave={() => document.querySelector('.FSD').classList.remove('hovered')}>
+                    <Box onClick={() => scrollToSection("contact")}>
                         <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
                         <BoxContent>Contact me</BoxContent>
                     </Box>
