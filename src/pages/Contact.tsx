@@ -8,7 +8,7 @@ const Contact = () => {
                 <form action="https://api.web3forms.com/submit" method="POST" id="form">
                     <input type="hidden" name="access_key" value="c4cf5c9d-d2a5-485a-b5b4-82940c6e3e10" />
                     <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                    <input type="hidden" name="redirect" value="your_redirect_url" />
+                    <input type="hidden" name="redirect" value="https://portfolio-nunoteixeiramotas-projects.vercel.app/" />
                     <div className="input-group">
                         <input type="text" name="name" id="name" placeholder="Your Name" required />
                     </div>
