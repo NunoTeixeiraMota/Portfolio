@@ -161,7 +161,7 @@ const Logo = styled.img`
 `;
 
 const ContentContainer = styled.div`
-    background: linear-gradient(135deg, rgba(125, 72, 177, 0.5) 0%, rgba(110, 52, 165, 0.5) 100%);
+    background: linear-gradient(135deg, rgba(125, 72, 177, 0) 0%,rgba(110, 52, 165, 0.3) 25%, rgba(110, 52, 165, 0.6) 50%,rgba(110, 52, 165, 0.3) 75%, rgba(110, 52, 165, 0) 100%);
     padding: 1rem;
     border-radius: 20px;
     display: flex;

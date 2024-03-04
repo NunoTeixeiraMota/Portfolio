@@ -33,6 +33,7 @@ const About = () => {
 
   return (
     <Container>
+      <LFM>
       <LeftSection>
         <Title style={{ textAlign: "center" }}>Life Map</Title>
         <Trajectory>
@@ -43,7 +44,7 @@ const About = () => {
             </CheckPoint>
             <CheckPoint>
               <CheckPointTitle>School</CheckPointTitle>
-              <CheckPointDescription>Esc. Sec. de Marco de Canaveses</CheckPointDescription>
+              <CheckPointDescription>Esc. Sec. de Marco de Canaveses </CheckPointDescription>
             </CheckPoint>
             <CheckPoint>
               <CheckPointTitle>University</CheckPointTitle>
@@ -52,6 +53,22 @@ const About = () => {
           </RoadMap>
         </Trajectory>
       </LeftSection>
+      <CenterSection>
+        <Title>Hobby</Title>
+        <Trajectory>
+          <RoadMap>
+            <CheckPoint>
+              <CheckPointTitle>LAN Party aeISEP </CheckPointTitle>
+              <CheckPointDescription>1st# Place CS:GO Tournament </CheckPointDescription>
+            </CheckPoint>
+            <CheckPoint>
+              <CheckPointTitle>Level Up- GameJam ISEP </CheckPointTitle>
+              <CheckPointDescription>3rd# Place</CheckPointDescription>
+            </CheckPoint>
+          </RoadMap>
+        </Trajectory>
+        </CenterSection>
+        </LFM>
       <RightSection>
         <TechStack>
           <Title style={{ textAlign: "left", fontSize: "1rem", color: "rgba(255, 255, 255, 0.25)" }}>Technologies I Work With:</Title>
@@ -72,6 +89,16 @@ const About = () => {
   );
 };
 
+const LFM = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Adjusted alignment */
+  height: 100vh;
+  width: 100%;
+  padding-top: 5rem;
+`;
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -79,7 +106,7 @@ const Container = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  padding-top: 5rem;
+  padding-top: 1rem;
 `;
 
 const LeftSection = styled.div`
@@ -171,4 +198,11 @@ const CustomIcon = styled.span`
   color: white;
 `;
 
+const CenterSection = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 export default About;
