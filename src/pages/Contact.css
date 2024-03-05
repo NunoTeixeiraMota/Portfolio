@@ -5,27 +5,25 @@
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.contact-form,
+.contact-info {
+    padding: 2rem; /* Uniform padding for alignment */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    color: white;
 }
 
 .contact-form {
     flex: 1;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 1); /* Opacity for white */
-}
-
-.contact-info{
-    max-width: 30rem;
-    padding: 1rem;
-}
-
-.contact-form {
-    background: linear-gradient(135deg, rgba(125, 72, 177, 0.4) 0%, rgba(110, 52, 165, 0.4) 100%);
-    color: #fff;
+    background-color: rgba(17, 25, 40, 0.7); /* Darker background for form */
 }
 
 .contact-info {
-    background: rgba(255, 255, 255, 0.75); /* Opacity for white */
-    color: #333;
+    max-width: 30rem;
+    background-color: rgba(17, 25, 40, 0.4); /* Lighter background for info */
 }
 
 .contact-form h2, .contact-info h3 {
@@ -75,7 +73,6 @@ textarea {
     transition: background 0.3s ease;
 }
 
-
 .submit-btn:hover {
     background: linear-gradient(135deg, rgba(125, 72, 177, 1) 0%, rgba(110, 52, 165, 1) 100%);
 }
@@ -89,8 +86,10 @@ textarea {
         flex-direction: column;
         max-width: 500px;
     }
-    .contact-form, .contact-info {
+    .contact-form,
+    .contact-info {
         width: 100%;
+        /* Ensure padding remains the same to maintain vertical alignment */
     }
 }
 

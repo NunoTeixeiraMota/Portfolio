@@ -1,4 +1,6 @@
 import './Contact.css'; // Import the CSS file
+import { FaLinkedin } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 const Contact = () => {
     return (
@@ -27,11 +29,26 @@ const Contact = () => {
                 </form>
             </div>
             <div className="contact-info">
-                <h3>Contact me</h3>
+                <h2>Contact me</h2>
                 <p>Open for any suggestion or just to have a chat</p>
                 <div className="info">
-                    <p>Email: jnmteixeira@gmail.com</p>
-                    <p>Linkedin: <a href='https://www.linkedin.com/in/jos%C3%A9-teixeiramt/'>Nuno Teixeira</a></p>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div>
+                            <FaLinkedin size={128} />
+                        </div>
+                        <div>
+                            <a style={{color:'white'}}href='https://www.linkedin.com/in/jos%C3%A9-teixeiramt/'>Nuno Teixeira</a>
+                        </div>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',margin:"2rem"}}>
+                        <div>
+                            <IoMail size={128} />
+                        </div>
+                        <div>
+                            <a style={{ color:'white' }}>jnmteixeira@gmail.com</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

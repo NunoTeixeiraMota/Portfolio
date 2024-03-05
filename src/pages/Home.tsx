@@ -161,8 +161,9 @@ const Logo = styled.img`
 `;
 
 const ContentContainer = styled.div`
-    background: linear-gradient(135deg, rgba(125, 72, 177, 0) 0%,rgba(110, 52, 165, 0.3) 25%, rgba(110, 52, 165, 0.6) 50%,rgba(110, 52, 165, 0.3) 75%, rgba(110, 52, 165, 0) 100%);
-    padding: 1rem;
+backdrop-filter: blur(16px) saturate(180%);
+-webkit-backdrop-filter: blur(16px) saturate(180%);
+background-color: rgba(17, 25, 40, 0.5);    padding: 1rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -204,8 +205,9 @@ const Box = styled.div`
     cursor: pointer;
     margin-bottom: 1rem;
     position: relative;
-    background: linear-gradient(135deg, rgba(125, 72, 177, 0.1) 0%, rgba(110, 52, 165, 0.1) 100%);
-    transition: box-shadow 0.3s ease; /* Add transition for the box-shadow property */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.2);    transition: box-shadow 0.3s ease; /* Add transition for the box-shadow property */
 
     &:hover {
         box-shadow: 0 0 20px 5px rgba(125, 72, 177, 0.9); /* Add the glowing effect on hover */
