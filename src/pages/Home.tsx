@@ -41,28 +41,28 @@ const Home = () => {
 
     return (
         <Container>
-        <FSD>
-            <span>F</span>
-            <span>U</span>
-            <span>L</span>
-            <span>L</span>
-            <span>S</span>
-            <span>T</span>
-            <span>A</span>
-            <span>C</span>
-            <span>K</span>
-            <ReflectionWrapper>
-                <GradientText>F</GradientText>
-                <GradientText>U</GradientText>
-                <GradientText>L</GradientText>
-                <GradientText>L</GradientText>
-                <GradientText>S</GradientText>
-                <GradientText>T</GradientText>
-                <GradientText>A</GradientText>
-                <GradientText>C</GradientText>
-                <GradientText>K</GradientText>
-            </ReflectionWrapper>
-        </FSD>
+            <FSD>
+                <span>F</span>
+                <span>U</span>
+                <span>L</span>
+                <span>L</span>
+                <span>S</span>
+                <span>T</span>
+                <span>A</span>
+                <span>C</span>
+                <span>K</span>
+                <ReflectionWrapper>
+                    <GradientText>F</GradientText>
+                    <GradientText>U</GradientText>
+                    <GradientText>L</GradientText>
+                    <GradientText>L</GradientText>
+                    <GradientText>S</GradientText>
+                    <GradientText>T</GradientText>
+                    <GradientText>A</GradientText>
+                    <GradientText>C</GradientText>
+                    <GradientText>K</GradientText>
+                </ReflectionWrapper>
+            </FSD>
 
             <FlexContainer>
                 <ContentContainer>
@@ -78,7 +78,6 @@ const Home = () => {
                         <Description>Crafting digital solutions from front to back.</Description>
                     </Content>
                 </ContentContainer>
-                {/* Boxes with click functionality */}
                 <BoxContainer>
                     <Box onClick={() => scrollToSection("about")}>
                         <BoxTitle><FontAwesomeIcon icon={faAddressCard} size="2x" color="white" /></BoxTitle>
@@ -88,7 +87,6 @@ const Home = () => {
                         <BoxTitle><FontAwesomeIcon icon={faBriefcase} size="2x" color="white" /></BoxTitle>
                         <BoxContent>See my projects</BoxContent>
                     </Box>
-                    {/* LinkedIn Box */}
                     <Box onClick={() => scrollToSection("contact")}>
                         <BoxTitle><FontAwesomeIcon icon={faEnvelope} size="2x" color="white" /></BoxTitle>
                         <BoxContent>Contact me</BoxContent>
@@ -99,10 +97,8 @@ const Home = () => {
     );
 };
 
-
-
 const FSD = styled.div`
-top: -5%;
+    top: -5%;
     color: white;
     font-size: 8em;
     z-index: 1;
@@ -110,25 +106,31 @@ top: -5%;
     display: inline-block;
     transition: transform 0.3s ease;
 
-    /* CSS for hover effect */
     span {
         display: inline-block;
         transition: transform 0.3s ease;
     }
 
-    /* Define hover effect */
     span:hover {
         transform: translateY(-10px);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 4em; /* Adjust font size for mobile */
     }
 `;
 
 const ReflectionWrapper = styled.div`
     position: absolute;
-    bottom: -115px; /* Adjust the distance between main text and reflection */
+    bottom: -115px;
     left: 0;
     width: 100%;
     transform: scaleY(-1);
     opacity: 0.5;
+
+    @media (max-width: 768px) {
+        bottom: -60px; /* Adjust position for mobile */
+    }
 `;
 
 const GradientText = styled.span`
@@ -145,11 +147,20 @@ const Container = styled.div`
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    padding: 1rem;
+
+    @media (max-width: 768px) {
+        padding: 0.5rem; /* Adjust padding for mobile */
+    }
 `;
 
 const FlexContainer = styled.div`
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack elements vertically on mobile */
+    }
 `;
 
 const Logo = styled.img`
@@ -158,36 +169,63 @@ const Logo = styled.img`
     border-radius: 20%;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
     margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+        width: 150px; /* Adjust logo size for mobile */
+    }
 `;
 
 const ContentContainer = styled.div`
-backdrop-filter: blur(16px) saturate(180%);
--webkit-backdrop-filter: blur(16px) saturate(180%);
-background-color: rgba(17, 25, 40, 0.5);    padding: 1rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.5);
+    padding: 1rem;
     border-radius: 20px;
     display: flex;
     align-items: center;
     flex-direction: row;
     margin-top: 2rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column; /* Stack elements vertically on mobile */
+        text-align: center; /* Center text on mobile */
+    }
 `;
 
 const LogoContainer = styled.div`
     margin-right: 1rem;
+
+    @media (max-width: 768px) {
+        margin-right: 0; /* Remove margin for mobile */
+        margin-bottom: 1rem; /* Add bottom margin for spacing */
+    }
 `;
 
 const Content = styled.div`
     text-align: left;
+
+    @media (max-width: 768px) {
+        text-align: center; /* Center text on mobile */
+    }
 `;
 
 const Title = styled.h1`
     font-size: 2.5rem;
     color: white;
+
+    @media (max-width: 768px) {
+        font-size: 2rem; /* Adjust title size for mobile */
+    }
 `;
 
 const Description = styled.p`
     font-size: 1.2rem;
     color: white;
     margin-top: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 1rem; /* Adjust description size for mobile */
+    }
 `;
 
 const BoxContainer = styled.div`
@@ -197,6 +235,12 @@ const BoxContainer = styled.div`
     justify-content: space-around;
     width: 30%;
     margin-left: 2rem;
+
+    @media (max-width: 768px) {
+        width: 100%; /* Full width on mobile */
+        margin-left: 0; /* Remove left margin */
+        padding-top: 1rem; /* Adjust padding for mobile */
+    }
 `;
 
 const Box = styled.div`
@@ -207,21 +251,34 @@ const Box = styled.div`
     position: relative;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.2);    transition: box-shadow 0.3s ease; /* Add transition for the box-shadow property */
+    background-color: rgba(17, 25, 40, 0.2);
+    transition: box-shadow 0.3s ease;
 
     &:hover {
-        box-shadow: 0 0 20px 5px rgba(125, 72, 177, 0.9); /* Add the glowing effect on hover */
+        box-shadow: 0 0 20px 5px rgba(125, 72, 177, 0.9);
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 0.5rem; /* Adjust margin for mobile */
     }
 `;
 
 const BoxTitle = styled.h2`
     font-size: 1rem;
     margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem; /* Adjust title size for mobile */
+    }
 `;
 
 const BoxContent = styled.p`
     font-size: 1rem;
-    color : white;
+    color: white;
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem; /* Adjust content size for mobile */
+    }
 `;
 
 export default Home;

@@ -7,11 +7,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 a {
   font-weight: 500;
   color: #ffffff; /* Set all links to white */
   text-decoration: inherit;
 }
+
 a:hover {
   color: #95CFEE;
 }
@@ -19,7 +21,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column;
+  align-items: center; /* Changed from place-items to align-items for better mobile support */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -27,7 +30,6 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  
 }
 
 button {
@@ -41,9 +43,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -54,10 +58,28 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4em; /* Reduce font size */
+  }
+
+  button {
+    padding: 0.5em 1em; /* Adjust padding */
+    font-size: 0.9em; /* Reduce font size */
+  }
+
+  body {
+    padding: 1rem; /* Add padding for better spacing */
   }
 }

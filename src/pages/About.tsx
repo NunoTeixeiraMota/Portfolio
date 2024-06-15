@@ -1,6 +1,6 @@
 import './About.css';
 import styled from 'styled-components';
-import { FaNodeJs, FaReact, FaJs, FaPython,FaJava } from 'react-icons/fa';
+import { FaNodeJs, FaReact, FaJs, FaPython, FaJava } from 'react-icons/fa';
 import { SiTypescript } from "react-icons/si";
 import { BiLogoMongodb } from "react-icons/bi";
 import { PiFileSqlDuotone } from "react-icons/pi";
@@ -8,10 +8,6 @@ import { FaAngular } from "react-icons/fa";
 import { FaGitAlt } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
 import { SiPostman } from "react-icons/si";
-
-
-
-
 
 const About = () => {
   const technologies = [
@@ -28,50 +24,48 @@ const About = () => {
     { name: "Linux", icon: FaLinux },
     { name: "Postman", icon: SiPostman }
   ];
-  
-  
 
   return (
     <Container>
       <LFM>
-      <LeftSection>
-        <Title style={{ textAlign: "center" }}>Life Map</Title>
-        <Trajectory>
-          <RoadMap>
-            <CheckPoint>
-              <CheckPointTitle>Born</CheckPointTitle>
-              <CheckPointDescription>Porto Portugal</CheckPointDescription>
-            </CheckPoint>
-            <CheckPoint>
-              <CheckPointTitle>School</CheckPointTitle>
-              <CheckPointDescription>Esc. Sec. de Marco de Canaveses </CheckPointDescription>
-            </CheckPoint>
-            <CheckPoint>
-              <CheckPointTitle>University</CheckPointTitle>
-              <CheckPointDescription>Computer Engineering at ISEP, Porto</CheckPointDescription>
-            </CheckPoint>
-          </RoadMap>
-        </Trajectory>
-      </LeftSection>
-      <CenterSection>
-        <Title>Hobby</Title>
-        <Trajectory>
-          <RoadMap>
-            <CheckPoint>
-              <CheckPointTitle>LAN Party aeISEP </CheckPointTitle>
-              <CheckPointDescription>1st# Place CS:GO Tournament </CheckPointDescription>
-            </CheckPoint>
-            <CheckPoint>
-              <CheckPointTitle>Level Up- GameJam ISEP </CheckPointTitle>
-              <CheckPointDescription>3rd# Place</CheckPointDescription>
-            </CheckPoint>
-          </RoadMap>
-        </Trajectory>
-        </CenterSection>
-        </LFM>
+        <Section>
+          <Title>Life Map</Title>
+          <Trajectory>
+            <RoadMap>
+              <CheckPoint>
+                <CheckPointTitle>Born</CheckPointTitle>
+                <CheckPointDescription>Porto Portugal</CheckPointDescription>
+              </CheckPoint>
+              <CheckPoint>
+                <CheckPointTitle>School</CheckPointTitle>
+                <CheckPointDescription>Esc. Sec. de Marco de Canaveses </CheckPointDescription>
+              </CheckPoint>
+              <CheckPoint>
+                <CheckPointTitle>University</CheckPointTitle>
+                <CheckPointDescription>Computer Engineering at ISEP, Porto</CheckPointDescription>
+              </CheckPoint>
+            </RoadMap>
+          </Trajectory>
+        </Section>
+        <Section>
+          <Title>Hobby</Title>
+          <Trajectory>
+            <RoadMap>
+              <CheckPoint>
+                <CheckPointTitle>LAN Party aeISEP </CheckPointTitle>
+                <CheckPointDescription>1st# Place CS:GO Tournament </CheckPointDescription>
+              </CheckPoint>
+              <CheckPoint>
+                <CheckPointTitle>Level Up- GameJam ISEP </CheckPointTitle>
+                <CheckPointDescription>3rd# Place</CheckPointDescription>
+              </CheckPoint>
+            </RoadMap>
+          </Trajectory>
+        </Section>
+      </LFM>
       <RightSection>
         <TechStack>
-          <Title style={{ textAlign: "left", fontSize: "1rem", color: "rgba(255, 255, 255, 0.25)" }}>Technologies I Work With:</Title>
+          <Title>Technologies I Work With:</Title>
           <TechList>
             {technologies.map((tech, index) => (
               <TechItem key={index}>
@@ -89,31 +83,44 @@ const About = () => {
   );
 };
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 1rem;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+`;
+
 const LFM = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-start; /* Adjusted alignment */
-  height: 100vh;
+  align-items: flex-start;
   width: 100%;
   padding-top: 5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  padding-top: 1rem;
-`;
-
-const LeftSection = styled.div`
+const Section = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
 `;
 
 const RightSection = styled.div`
@@ -121,17 +128,31 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 2rem;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Trajectory = styled.div`
   border-radius: 8px;
   font-size: 1.2rem;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 const RoadMap = styled.div`
@@ -165,6 +186,12 @@ const TechList = styled.ul`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const TechItem = styled.li`
@@ -175,12 +202,16 @@ const TechItem = styled.li`
 const TechCard = styled.div`
   background-color: rgba(36, 36, 36, 0.5);
   border-radius: 8px;
-  padding: 1em; /* Adjust padding to ensure all cards have the same size */
+  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 150px; /* Set a fixed width for all cards */
+  width: 150px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const TechName = styled.span`
@@ -189,20 +220,13 @@ const TechName = styled.span`
 `;
 
 const Icon = styled.span`
-  font-size: 4rem; /* Increase the icon size */
+  font-size: 4rem;
   color: white;
 `;
 
 const CustomIcon = styled.span`
-  font-size: 4rem; /* Adjust the size to match the icon size */
+  font-size: 4rem;
   color: white;
 `;
 
-const CenterSection = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
 export default About;
