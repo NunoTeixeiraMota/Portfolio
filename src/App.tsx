@@ -5,8 +5,10 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Navbar from './navbar';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
+    <Analytics/>
     const links = [
         { label: 'Home', to: '#home' },
         { label: 'About', to: '#about' },
