@@ -1,0 +1,28 @@
+/* src/components/MobileNotSupported.css */
+
+.mobile-not-supported {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.message-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff; /* White background for message container */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 80%;
+}
+
+.message-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333; /* Dark color for heading */
+}
+
+.message-container p {
+  font-size: 1.2rem;
+  color: #666; /* Slightly darker gray for text */
+}

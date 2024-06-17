@@ -5,6 +5,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Navbar from './navbar';
+import MobileNotSupported from './MobileNotSupported';
 
 function App() {
     const links = [
@@ -15,8 +16,24 @@ function App() {
     ];
 
     const [isNavbarVisible, setIsNavbarVisible] = useState(true); // Initially set to true
+    const [isMobile, setIsMobile] = useState(false); // State to track if mobile view
 
     const navbarRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth < 800);
+        };
+    
+        handleResize();
+        window.addEventListener('resize', handleResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
+
+
 
     useEffect(() => {
         const interBubble = document.querySelector<HTMLDivElement>('.interactive')!;
@@ -66,7 +83,13 @@ function App() {
             }
         };
     }, []);
-
+    if (isMobile) {
+        return (
+            <div className="App">
+            <MobileNotSupported/>
+            </div>
+        );
+    }
     return (
         <div className="App">
             <div ref={navbarRef}>
